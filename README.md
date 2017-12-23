@@ -19,17 +19,13 @@ Query_hottest_state.py: This contains the query to find the hottest state in the
 Usage:  python query_hottest_state.py <input table name> gs://<bucket-name>/<filename.csv>
 The script takes two parameters, the input table (example: gsod2017) and the output file name in the google storage bucket as indicated. 
 A more advance usage can be to use wildcards for tables  such as “gsod20*”so that the decade wise data can be analysed. It is always recommended to create a new bucket to store the data in the google cloud storage. Internally, the script queries the input table and stores the results into a pre-created table in google bigquery(which is referred as dest_table_id in the script). Then it calls a function to write this table into google storage.
-
-Results: This script provides the following results indicating that TEXAS, CALIFORNIA and FLORIDA are the top three hottest states.  
+Results: This script provides the following results indicating that TEXAS, CALIFORNIA and FLORIDA are the top three hottest states. 
 
 Query_coldest_state.py: The usage and the functioning of this script is same as above except that it outputs the number of station which report a temperature of less than 10F grouped by state.
  Results:
  
 Query_windiest_state.py: This script queries the wind_reports table in the noaa_spc dataset and outputs the states with highest number of winds reported in a descending order. This table consists of the incidents between 2015 to 2017
 Usage: python query_windiest_state.py gs://<bucket-name/<filename.csv>
-Results:
- 
-
 
 Scheduling the queries: 
 Bigquery doesn’t essentially have a functionality that lets us to schedule the queries to run automatically. This can be done using third party packages such as CRON or AIRFLOW. Also, one can make use of recently introduced Google Cloud Functions or develop the programs in Google  Appscript which is a Javascript Api developed by Google.
