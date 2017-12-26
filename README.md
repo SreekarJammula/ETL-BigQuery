@@ -12,7 +12,7 @@ NOAA_SPC DATASET: This dataset consists of the wind_reports table that has the i
 Architecture:
    The Architecture of this project can be discussed as below:
    
-   ![Some text](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/arch(2).png)
+   <img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/arch(2).png">
    
    The Query scheduler can trigger the python scripts which will prompt the BigQuery to perform the queries and then the result can be stored in the Google Cloud Storage. 
    
@@ -39,7 +39,7 @@ Usage:  python query_coldest_state.py input table name gs://bucket-name/filename
 
 Results:
 
-![Some text](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot(.png)
+<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(4).png">
 
 
  
@@ -49,7 +49,7 @@ Usage: python query_windiest_state.py gs://bucket-name/filename.csv
 
 Results:
 
-![Some text]({{site.url}}{{site.baseurl}}/assets/Screenshot(6).png)
+<img src= "https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(6).png">
  
 
 Scheduling the query processing: 
