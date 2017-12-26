@@ -9,6 +9,13 @@ This project uses two different weather data sets provided by NOAA. These are th
 NOAA_GSOD DATASET: This is a huge dataset of several meteorological factors such as maximum temperature, minimum temperature, precipitation etc., recorded at several weather stations across the world. The data is arranged in year wise tables (starting from year 1929 to 2017) wherein the factors for each weather station for every day in that year are recorded (example table names:gsod2017,gsod2016 etc.,) .There is also another table  called ‘stations’ which consists the information about the stations.
 NOAA_SPC DATASET: This dataset consists of the wind_reports table that has the information about the windspeeds across the United States along with their timestamps.
 
+Architecture:
+   The Architecture of this project can be discussed as below:
+   
+   ![Some text]({{site.url}}{{site.baseurl}}/assets/arch(2).png)
+   
+   The Query scheduler can trigger the python scripts which will prompt the BigQuery to perform the queries and then the result can be stored in the Google Cloud Storage. 
+   
 Querying the data:
    In order to query the data, I chose the Python API for BigQuery to develop python scripts. I also used the same API to export the results into the GCS buckets as csv files. The main objective of choosing the python API is because it provides some powerful functions which make the coding easy and also allows us to write a persistent query which can be changed easily.
 I have written three scripts and given below is a description of their working and usage: 
@@ -21,7 +28,9 @@ A more advance usage can be to use wildcards for tables, such as “gsod20*”so
 
 Results: This script provides the following results indicating that TEXAS, CALIFORNIA and FLORIDA are the top three hottest states. 
 
-<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(3).png">
+![Some text]({{site.url}}{{site.baseurl}}/assets/Screenshot(3).png)
+
+
  
 
 Query_coldest_state.py: The usage and the functioning of this script is same as above except that it outputs the number of station which report a temperature of less than 10F grouped by state.
@@ -30,7 +39,7 @@ Usage:  python query_coldest_state.py input table name gs://bucket-name/filename
 
 Results:
 
-<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(4).png">
+![Some text]({{site.url}}{{site.baseurl}}/assets/Screenshot(4).png)
 
 
  
@@ -40,7 +49,7 @@ Usage: python query_windiest_state.py gs://bucket-name/filename.csv
 
 Results:
 
-<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(6).png">
+![Some text]({{site.url}}{{site.baseurl}}/assets/Screenshot(6).png)
  
 
 Scheduling the query processing: 
