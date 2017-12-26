@@ -15,30 +15,32 @@ I have written three scripts and given below is a description of their working a
 
 Query_hottest_state.py: This contains the query to find the hottest state in the United States, specifically in the year 2017. This query is designed such that it returns the number of weather stations reporting daily mean temperature greater than 80F (which is considered as a general cut off temperature that defines the weather to be hot) grouped by states in the United States and displays the results in a descending order. 
 
-Usage:  python query_hottest_state.py <input table name> gs://<bucket-name>/<filename.csv>
+Usage:  python query_hottest_state.py input table name gs://bucket-name/filename.csv
 The script takes two parameters, the input table (example: gsod2017) and the output file name in the google storage bucket as indicated. 
 A more advance usage can be to use wildcards for tables, such as “gsod20*”so that the decade wise data can be analyzed. It is always recommended to give GCS buckets suitable names when exporting the data.  Internally, the script queries the input table and stores the results into a pre-created table in Google BigQuery(which is referred as dest_table_id in the script). Then it calls a function to write this table into google storage.
 
 Results: This script provides the following results indicating that TEXAS, CALIFORNIA and FLORIDA are the top three hottest states. 
 
-![useful image](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(3).png)
+<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(3).png">
  
 
 Query_coldest_state.py: The usage and the functioning of this script is same as above except that it outputs the number of station which report a temperature of less than 10F grouped by state.
-Usage:  python query_coldest_state.py <input table name> gs://<bucket-name>/<filename.csv>
+
+Usage:  python query_coldest_state.py input table name gs://bucket-name/filename.csv
 
 Results:
 
-![useful image](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(4).png)
+<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(4).png">
 
 
  
 Query_windiest_state.py: This script queries the wind_reports table in the noaa_spc dataset and outputs the states with highest number of wind incidents reported in a descending order. This table consists of the incidents between 2015 to 2017
-Usage: python query_windiest_state.py gs://<bucket-name/<filename.csv>
+
+Usage: python query_windiest_state.py gs://bucket-name/filename.csv
 
 Results:
 
-![useful image](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(6).png)
+<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(6).png>
  
 
 Scheduling the query processing: 
