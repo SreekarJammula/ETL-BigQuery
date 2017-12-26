@@ -40,7 +40,7 @@ Usage: python query_windiest_state.py gs://bucket-name/filename.csv
 
 Results:
 
-<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(6).png>
+<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(6).png">
  
 
 Scheduling the query processing: 
