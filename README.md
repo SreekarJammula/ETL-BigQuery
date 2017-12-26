@@ -12,7 +12,7 @@ NOAA_SPC DATASET: This dataset consists of the wind_reports table that has the i
 Architecture:
    The Architecture of this project can be discussed as below:
    
-   ![Some text]({{site.url}}{{site.baseurl}}/assets/arch(2).png)
+   ![Some text](ETL-BigQuery/Assets/Screenshot (6).png )
    
    The Query scheduler can trigger the python scripts which will prompt the BigQuery to perform the queries and then the result can be stored in the Google Cloud Storage. 
    
