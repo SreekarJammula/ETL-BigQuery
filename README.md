@@ -1,5 +1,5 @@
 
-<h1>ETL on Large datasets using Google BigQuery<!h1>
+ETL on Large datasets using Google BigQuery
 
 BigQuery is a very sophisticated data warehouse which helps us to easily perform ETL operations. Being a serverless tool, it helps in analyzing huge data sets within a very small amount of time and also allows us to connect with several other services within and outside GCP to ingest, process and output the data. 
 The main premise of this blog is to discuss a project that processes huge amounts of weather data provided by NOAA (National Oceanic and Atmospheric Administration) and try to find out the hottest, coldest and windiest states in the United States. This project also aims at connecting to Google Cloud Storage to output the queried data in the form of CSV files. This is helpful in cases when a federated dataset of decade wise data is required to find the evolution of weather patterns.
@@ -24,6 +24,7 @@ Results: This script provides the following results indicating that TEXAS, CALIF
  
 
 Query_coldest_state.py: The usage and the functioning of this script is same as above except that it outputs the number of station which report a temperature of less than 10F grouped by state.
+
 Results:
 
 ![alt text](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(4).png)
@@ -32,6 +33,7 @@ Results:
  
 Query_windiest_state.py: This script queries the wind_reports table in the noaa_spc dataset and outputs the states with highest number of wind incidents reported in a descending order. This table consists of the incidents between 2015 to 2017
 Usage: python query_windiest_state.py gs://<bucket-name/<filename.csv>
+
 Results:
 
 ![alt text](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(6).png)
