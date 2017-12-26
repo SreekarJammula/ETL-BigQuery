@@ -12,7 +12,7 @@ NOAA_SPC DATASET: This dataset consists of the wind_reports table that has the i
 Architecture:
    The Architecture of this project can be discussed as below:
    
-   ![Some text](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot(6).png)
+   ![Some text](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/arch(2).png)
    
    The Query scheduler can trigger the python scripts which will prompt the BigQuery to perform the queries and then the result can be stored in the Google Cloud Storage. 
    
@@ -28,7 +28,7 @@ A more advance usage can be to use wildcards for tables, such as “gsod20*”so
 
 Results: This script provides the following results indicating that TEXAS, CALIFORNIA and FLORIDA are the top three hottest states. 
 
-![Some text]({{site.url}}{{site.baseurl}}/assets/Screenshot(3).png)
+<img src="https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot%20(3).png">
 
 
  
@@ -39,7 +39,7 @@ Usage:  python query_coldest_state.py input table name gs://bucket-name/filename
 
 Results:
 
-![Some text]({{site.url}}{{site.baseurl}}/assets/Screenshot(4).png)
+![Some text](https://github.com/SreekarJammula/ETL-BigQuery/blob/master/Assets/Screenshot(.png)
 
 
  
