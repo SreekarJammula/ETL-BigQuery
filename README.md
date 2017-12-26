@@ -1,5 +1,5 @@
 
-ETL on Large datasets using Google BigQuery
+#ETL on Large datasets using Google BigQuery
 
    BigQuery is a very sophisticated data warehouse which helps us to easily perform ETL operations. Being a serverless tool, it helps in analyzing huge data sets within a very small amount of time and also allows us to connect with several other services within and outside GCP to ingest, process and output the data. 
    The main premise of this blog is to discuss a project that processes huge amounts of weather data provided by NOAA (National Oceanic and Atmospheric Administration) and try to find out the hottest, coldest and windiest states in the United States. This project also aims at connecting to Google Cloud Storage to output the queried data in the form of CSV files. This is helpful in cases when a federated dataset of decade wise data is required to find the evolution of weather patterns.
